@@ -1,4 +1,3 @@
-Service Name,Port Number,Transport Protocol,Description,Assignee,Contact,Registration Date,Modification Date,Reference,Service Code,Unauthorized Use Reported,Assignment Notes
 ,0,tcp,Reserved,[Jon_Postel],[Jon_Postel],,,,,,
 ,0,udp,Reserved,[Jon_Postel],[Jon_Postel],,,,,,
 tcpmux,1,tcp,TCP Port Service Multiplexer,[Mark_Lottor],[Mark_Lottor],,,,,,
@@ -539,7 +538,6 @@ cdc,223,tcp,Certificate Distribution Center,[Kannan_Alagappan],[Kannan_Alagappan
 cdc,223,udp,Certificate Distribution Center,[Kannan_Alagappan],[Kannan_Alagappan],,,,,,
 masqdialer,224,tcp,masqdialer,[Charles_Wright],[Charles_Wright],,,,,,"Possible Conflict of Port 222 with ""Masqdialer"""
 masqdialer,224,udp,masqdialer,[Charles_Wright],[Charles_Wright],,,,,,"Possible Conflict of Port 222 with ""Masqdialer"""
-,225-241,,Reserved,[Jon_Postel],[Jon_Postel],,,,,,
 direct,242,tcp,Direct,[Herb_Sutter],[Paul_Horton],,,,,,
 direct,242,udp,Direct,[Herb_Sutter],[Paul_Horton],,,,,,
 sur-meas,243,tcp,Survey Measurement,[Dave_Clark],[Dave_Clark],,,,,,
