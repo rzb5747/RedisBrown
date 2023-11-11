@@ -21,13 +21,7 @@ public class CSVReader {
     private static final int THREAD_POOL_SIZE = 100;
     private Map<Integer, Boolean> portStatus = new ConcurrentHashMap<>();
     public Map<Integer, String> dataMap = new TreeMap<>();
-    private void printResults() {
-        portStatus.forEach((port, isOpen) -> {
-            if (isOpen) {
-                System.out.println("Port " + port + " is open.");
-            }
-        });
-    }
+
     public void scanPorts(String host) {
         ExecutorService executor = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
         for( int port = 1; port <= MAX_PORT; port++) {
@@ -87,11 +81,7 @@ public class CSVReader {
             System.out.println(  entry.getKey() + " " + entry.getValue());
         }
     }
-    public void printDataFromCSV(){
-    for (Map.Entry<Integer, String> entry : dataMap.entrySet()) {
-        System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
 
-    }}
     private void printOpenPorts() {
 
         portStatus.forEach((port,isOpen)->
@@ -110,7 +100,7 @@ public void printOpenPortDescriptions() {
             if (isOpen) {
                 String description = dataMap.get(port);
                 if (description != null) {
-                    System.out.println( + port  + " " + description);
+                    System.out.println(  port  + " " + description);
                 }
             }
         }
@@ -168,7 +158,7 @@ public void printOpenPortDescriptions() {
         reader.printDataMap();
         reader.printOpenPorts();
         reader.printOpenPortDescriptions();
-        reader.OpenPortRedis();;
+        reader.OpenPortRedis();
 
 //        reader.printResults();
 //        reader.printDataFromCSV();
